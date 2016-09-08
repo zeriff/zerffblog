@@ -1,0 +1,18 @@
+callback([
+
+  {
+    "text": "Best CSS frameworks",
+    "href": "http://zeriff.com/css/2015/12/21/best-css-frameworks/"
+  } ,
+
+  {
+    "text": "Stopwatch using javascript",
+    "href": "http://zeriff.com/javascript/2015/12/28/stopwatch-in-javascript/"
+  } ,
+
+  {
+    "text": "Angular Js Beginner Guide Part I",
+    "href": "http://zeriff.com/angularjs/2016/02/21/angularjs-beginner-guide/"
+  } 
+
+])

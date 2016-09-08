@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://zeriff.com</loc>
+    </url>
+    
+    
+    <url>
+        <loc>http://zeriff.com/404/</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/about/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/categories/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/links.jsonp</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/search.json</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/sitemap.xml</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/tags/index.html</loc>
+    </url>
+    
+
+    
+    <url>
+        <loc>http://zeriff.com/angularjs/2016/02/21/angularjs-beginner-guide/</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/javascript/2015/12/28/stopwatch-in-javascript/</loc>
+    </url>
+    
+    <url>
+        <loc>http://zeriff.com/css/2015/12/21/best-css-frameworks/</loc>
+    </url>
+    
+</urlset>

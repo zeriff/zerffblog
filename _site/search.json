@@ -1,0 +1,27 @@
+[
+	
+		{
+		  "title"      : "Angular Js Beginner Guide Part I",
+		  "category"   : "AngularJs",
+		  "url"        : "http://zeriff.com/angularjs/2016/02/21/angularjs-beginner-guide/",
+		  "date"       : "2016-02-21 21:00:00 +0000",
+		  "shortdate"  : "February 21, 2016"
+		} ,
+	
+		{
+		  "title"      : "Stopwatch using javascript",
+		  "category"   : "JavaScript",
+		  "url"        : "http://zeriff.com/javascript/2015/12/28/stopwatch-in-javascript/",
+		  "date"       : "2015-12-28 21:00:00 +0000",
+		  "shortdate"  : "December 28, 2015"
+		} ,
+	
+		{
+		  "title"      : "Best CSS frameworks",
+		  "category"   : "CSS",
+		  "url"        : "http://zeriff.com/css/2015/12/21/best-css-frameworks/",
+		  "date"       : "2015-12-21 18:09:00 +0000",
+		  "shortdate"  : "December 21, 2015"
+		} 
+	
+]
