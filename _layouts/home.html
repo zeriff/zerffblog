@@ -48,64 +48,65 @@
         <article class="notepad-content">
             <!-- Main carousel -->
             <div class="notepad-site-head-content">
-                <div id="slides" class="owl-carousel">
-                    {% if page.heroCarousel %}
-                        {% for item in page.heroCarousel%}
-                            <div className="ui fluid image">
-                                <center>
+                <center>
+                    <div id="slides" class="owl-carousel">
+                        {% if page.heroCarousel %}
+                            {% for item in page.heroCarousel%}
+                                <div className="ui fluid image">
                                     <img className="lazyOwl" src="{{site.url}}/images/{{item}}.jpg"/>
-                                    <center></div>
-                                    {% endfor%}
-                                {% endif %}
-                            </div>
-                        </div>
-                        <!-- End main carousel -->
-                        <br/>
-                        <br/>
-                        <br/>
-                        {% if page.showcaseDesigns %}
-                            <div class="notepad-site-head-content">
-                                <div id="showcaseSlides" class="owl-carousel">
-                                    {% for design in page.showcaseDesigns %}
-                                        <div className="ui fluid image">
-                                            <a href="{{site.url}}/item/{{design}}">
-                                                <img className="lazyOwl" src="{{site.url}}/images/{{design}}.jpg"/>
-                                            </a>
-                                        </div>
-                                        {% endfor%}
-                                    {% endif %}
                                 </div>
-                            </div>
-                            {{ content }}
-                        </article>
-                        <div class="content">
-                            {% include footer.html %}
-                            {% include scripts.html %}
-                            <script>
-                                $(document).ready(function () {
-                                    $("#showcaseSlides").owlCarousel({
-                                        navigation: true,
-                                        slideSpeed: 500,
-                                        paginationSpeed: 800,
-                                        autoPlay: false,
-                                        items: 3,
-                                        itemsTablet: [768, 2]
-                                    });
-
-                                    $("#slides").owlCarousel({
-                                        navigation: false,
-                                        slideSpeed: 500,
-                                        paginationSpeed: 800,
-                                        singleItem: true,
-                                        autoPlay: true,
-                                        itemsTablet: [768, 2]
-                                    });
-                                });
-                            </script>
+                                {% endfor%}
+                            {% endif %}
                         </div>
+                    </center>
+                </div>
+                <!-- End main carousel -->
+                <br/>
+                <br/>
+                <br/>
+                {% if page.showcaseDesigns %}
+                    <div class="notepad-site-head-content">
+                        <div id="showcaseSlides" class="owl-carousel">
+                            {% for design in page.showcaseDesigns %}
+                                <div className="ui fluid image">
+                                    <a href="{{site.url}}/item/{{design}}">
+                                        <img className="lazyOwl" src="{{site.url}}/images/{{design}}.jpg"/>
+                                    </a>
+                                </div>
+                                {% endfor%}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {{ content }}
+                </article>
+                <div class="content">
+                    {% include footer.html %}
+                    {% include scripts.html %}
+                    <script>
+                        $(document).ready(function () {
+                            $("#showcaseSlides").owlCarousel({
+                                navigation: true,
+                                slideSpeed: 500,
+                                paginationSpeed: 800,
+                                autoPlay: false,
+                                items: 3,
+                                itemsTablet: [768, 2]
+                            });
 
-                    </body>
-                </html>
-            </script>
-        </body>
-    </html>
+                            $("#slides").owlCarousel({
+                                navigation: false,
+                                slideSpeed: 500,
+                                paginationSpeed: 800,
+                                singleItem: true,
+                                autoPlay: true,
+                                itemsTablet: [768, 2]
+                            });
+                        });
+                    </script>
+                </div>
+
+            </body>
+        </html>
+    </script>
+</body>
+</html>
