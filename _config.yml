@@ -30,15 +30,6 @@ bing_verify:
 
 # Links to include in footer navigation
 # For external links add external: true
-links:
-  - title: Home
-    url: /
-    external: false
-    icon: home
-  - title: Categories
-    url: /categories
-  - title: About
-    url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Mumbai
