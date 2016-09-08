@@ -1,10 +1,10 @@
 ---
 layout: item
-permalink: /item/strip
-imageUrl: /images/strip.jpg
+permalink: /item/cross
+imageUrl: /images/cross.jpg
 ---
 
-<h3>Strips</h3>
+<h3>Cross Design</h3>
 <hr>
 <h5>₹599</h5>
 <p>Premium quality Biowash T-shirt for men</p>

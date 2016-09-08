@@ -6,6 +6,10 @@
 
     
     <url>
+        <loc>http://localhost:4000/item/199x</loc>
+    </url>
+    
+    <url>
         <loc>http://localhost:4000/404.html</loc>
     </url>
     
@@ -15,6 +19,10 @@
     
     <url>
         <loc>http://localhost:4000/categories/index.html</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/item/cross</loc>
     </url>
     
     <url>
