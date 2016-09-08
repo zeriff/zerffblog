@@ -5,7 +5,7 @@
     <url>
         <loc>{{ site.url }}</loc>
     </url>
-    
+
     {% for page in site.pages %}
     <url>
         <loc>{{ site.url }}{{ page.url }}</loc>

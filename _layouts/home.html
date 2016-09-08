@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html>
-<head>
-{% include head.html %}
-</head>
-<body class="home-template" itemscope itemtype="http://schema.org/WebPage">
-<header class="notepad-site-head">
-    <div class="notepad-site-head-menu">
-        <a class="notepad-blog-logo" href="{{ site.url }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="Blog Logo" /></a>
-        
-        
-        <div class="notepad-blog-menu">      
-    <div class="notepad-mobile-menu show-for-small">
-        <a href="#"><i class="fa fa-bars"></i></a>
-    </div>
-    <ul class="notepad-menu">
-        <li class="notepad-mobile-close-btn show-for-small text-right">
-            <a href="#"><i class="fa fa-times"></i></a>
-        </li>
-{% for link in site.links %}
-            <li>{% if link.external %}
-            <a href="{{ link.url }}">{{ link.title }}</a>
-            {% else %}
-            <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
-            {% endif %} </li>
-{% endfor %}            
-    </ul>
-</div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="notepad-site-head-content" >
-        <div class="notepad-site-head-bg"></div>
-        <h1 class="notepad-blog-title">
-            <span class="notepad-site-head-title-bg">
-                {{ site.title }}
-            </span>
-        </h1>
-        <h2 class="notepad-blog-description">{{ site.description }}</h2>
-    </div>
-</header>
 
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="home-template" itemscope itemtype="http://schema.org/WebPage">
+        <header class="notepad-site-head">
+            <div class="notepad-site-head-menu">
+                <a class="notepad-blog-logo" href="{{ site.url }}"><img src="{{ site.url }}/images/logo.png" alt="Blog Logo"/></a>
+                <div class="notepad-blog-menu">
+                    <div class="notepad-mobile-menu show-for-small">
+                        <a href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <ul class="notepad-menu">
+                        <li class="notepad-mobile-close-btn show-for-small text-right">
+                            <a href="#">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </li>
+                        {% for link in site.links %}
 
-<main class="notepad-content" role="main">
+                            <li>
+                                {% if link.external %}
+                                    <a href="{{ link.url }}">{{ link.title }}</a>
+                                {% else %}
+                                    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
 
-            {{ content }}
-</main>
-    {% include footer.html %}
+            <!-- <div class="notepad-site-head-content">
+                <div class="notepad-site-head-bg"></div>
+                <h1 class="notepad-blog-title">
+                    <span class="notepad-site-head-title-bg">
+                        {{ site.title }}
+                    </span>
+                </h1>
+                <h2 class="notepad-blog-description">{{ site.description }}</h2>
+            </div> -->
+        </header>
+        <article class="notepad-content">
+            <!-- Main carousel -->
+            <div class="notepad-site-head-content">
+                <div id="slides" class="owl-carousel">
+                    {% if page.heroCarousel %}
+                        {% for item in page.heroCarousel%}
+                            <div className="ui fluid image">
+                                <img className="lazyOwl" src="{{site.url}}/images/{{item}}.jpg"/>
+                            </div>
+                            {% endfor%}
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- End main carousel -->
+                <br/>
+                <br/>
+                <br/>
+                {% if page.showcaseDesigns %}
+                    <div class="notepad-site-head-content">
+                        <div id="showcaseSlides" class="owl-carousel">
+                            {% for design in page.showcaseDesigns %}
+                                <div className="ui fluid image">
+                                    <a href="{{site.url}}/item/{{design}}">
+                                        <img className="lazyOwl" src="{{site.url}}/images/{{design}}.jpg"/>
+                                    </a>
+                                </div>
+                                {% endfor%}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {{ content }}
+                </article>
+                <div class="content">
+                    {% include footer.html %}
+                    {% include scripts.html %}
+                    <script>
+                        $(document).ready(function () {
+                            $("#showcaseSlides").owlCarousel({
+                                navigation: true,
+                                slideSpeed: 500,
+                                paginationSpeed: 800,
+                                autoPlay: false,
+                                items: 3,
+                                itemsTablet: [768, 2]
+                            });
 
-{% include scripts.html %}  
+                            $("#slides").owlCarousel({
+                                navigation: false,
+                                slideSpeed: 500,
+                                paginationSpeed: 800,
+                                singleItem: true,
+                                autoPlay: true,
+                                itemsTablet: [768, 2]
+                            });
+                        });
+                    </script>
+                </div>
+
+            </body>
+        </html>
+    </script>
 </body>
 </html>

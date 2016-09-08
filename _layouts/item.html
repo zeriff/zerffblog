@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="post-template page" itemscope itemtype="http://schema.org/WebPage">
+        <main id="notepad-page-container" class="notepad-page-container" role="main">
+            <header class="notepad-page-header">
+                <div class="notepad-page-menu-header">
+                    <a class="notepad-blog-logo" href="{{ site.url }}">
+                        <!-- <img src="{{ site.url }}/images/{{ site.logo }}" alt="Blog Logo"> -->
+                    </a>
+                    <div class="notepad-blog-menu">
+                        <div class="notepad-mobile-menu show-for-small">
+                            <a href="#">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <ul class="notepad-menu">
+                            <li class="notepad-mobile-close-btn show-for-small text-right">
+                                <a href="#">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </li>
+                            {% for link in site.links %}
+                                <li>
+                                    {% if link.external %}
+                                        <a href="{{ link.url }}">{{ link.title }}</a>
+                                    {% else %}
+                                        <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <br>
+            <!-- <article class="website-example row wide">
+                <div class="large-6 columns">
+                    <div class="row">
+                        <div class="small-8 columns">
+                            <img src="{{site.url}}{{page.imageUrl}}"/>
+                        </div>
+                        <div class=" small-4 columns">
+                            <img src="{{site.url}}{{page.imageUrl}}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-6 columns">
+                    <h3>Mini Cooper</h3>
+                    <h6>built with foundation</h6>
+                    <p>There’s nothing small about the effects on this “Mini” website and its use of scrolling as a fly-around of its eponymous car. The parallax steps aside on mobile for a neat intuitive image layout. The hamburger menu spins into action when clicked
+                        revealing a gorgeous dropdown.</p>
+                    <a class="button">Take a Closer Look »</a>
+                </div>
+            </article> -->
+            <div class="cf"></div>
+            {% include footer.html %}
+        </main>
+        {% include scripts.html %}
+    </body>
+</html>
