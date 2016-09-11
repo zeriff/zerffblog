@@ -48,17 +48,16 @@
         <article class="notepad-content">
             <!-- Main carousel -->
             <div class="notepad-site-head-content">
-                <center>
-                    <div id="slides" class="owl-carousel">
-                        {% if page.heroCarousel %}
-                            {% for item in page.heroCarousel%}
-                                <div className="ui fluid image">
-                                    <img className="lazyOwl" src="{{site.url}}/images/{{item}}.jpg"/>
-                                </div>
-                                {% endfor%}
-                            {% endif %}
-                        </div>
-                    </center>
+
+                <div id="slides" class="owl-carousel">
+                    {% if page.heroCarousel %}
+                        {% for item in page.heroCarousel%}
+                            <div className="ui fluid image">
+                                <img className="lazyOwl" src="{{site.url}}/images/{{item}}.jpg"/>
+                            </div>
+                            {% endfor%}
+                        {% endif %}
+                    </div>
                 </div>
                 <!-- End main carousel -->
                 <br/>
