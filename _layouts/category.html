@@ -5,11 +5,13 @@
     </head>
     <body class="post-template page" itemscope itemtype="http://schema.org/WebPage">
         <main id="notepad-page-container" class="notepad-page-container" role="main">
+
             <header class="notepad-page-header">
                 <div class="notepad-page-menu-header">
                     <a class="notepad-blog-logo" href="{{ site.url }}">
-                        <img src="{{ site.url }}/images/{{ site.wlogo }}">
+                        <img src="{{ site.url }}/images/{{ site.wlogo }}" alt="Blog Logo">
                     </a>
+
                     <div class="notepad-blog-menu">
                         <div class="notepad-mobile-menu show-for-small">
                             <a href="#">
@@ -35,30 +37,39 @@
                         </ul>
                     </div>
                 </div>
-            </header>
-            <br>
-
-            <div class="ui container">
-                <div class="ui stackable grid">
-                    <div class="eight wide column">
-                        <img class="ui big image" src="{{site.url}}{{page.imageUrl}}"/>
-                    </div>
-                    <div class="six wide column">
-                        <div class="info">
-                            {{content}}
-                        </div>
-                    </div>
+                <div class="zcontainer">
+                    <h2>{{ page.title }}</h2>
                 </div>
             </div>
+        </header>
 
-            <div class="cf"></div>
-            {% include footer.html %}
-        </main>
-        {% include scripts.html %}
+        <!-- content -->
+        <div class="zcontainer">
+            <div class="ui stackable four column grid">
+                {% for shopitem in page.shopitems %}
+                    <div class="column">
+                        <div class="card">
+                            <div class="image">
+                                <img src="{{site.url}}/images/{{shopitem.image}}">
+                            </div>
+                            <div class="action">
+                                <a href="{{site.url}}/item/{{shopitem.url}}">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
 
-        <script>
-            $(document).ready(function () {});
-        </script>
-
-    </body>
+            {{content}}
+        </div>
+        <div class="cf"></div>
+        {% include footer.html %}
+    </main>
+    {% include scripts.html %}
+    <script>
+        $(document).ready(function () {
+            $('.ui.dropdown').dropdown();
+        });
+    </script>
+</body>
 </html>

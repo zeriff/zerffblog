@@ -2,23 +2,20 @@
 layout: home
 title: home
 tags: [IndianClothing,lifstyle]
-heroCarousel: ["1","2","3","4","5"]
+heroCarousel: ["1","3","2","4","5"]
 showcaseDesigns: ["desi","strip","cross","199x"]
 ---
 
 <div id="indexposts">
-<hr/>
-	<header class="notepad-post-header">
-		<center>
-		<h2 class="notepad-post-title">
-			Stories
-		</h2>
-	</center>
-	</header>
-
 	{% if site.paginate %}
 		{% for post in paginator.posts %}
 			<article class="notepad-index-post post row">
+				<center>
+					<h2>
+						Stories
+					</h2>
+				</center>
+				<hr/>
 				<div class="small-12 medium-3 large-2 columns datetime">
 					<span class="notepad-post-meta">
 						<time datetime="{{ post.date | date_to_xmlschema }}">

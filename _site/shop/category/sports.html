@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
 <title>
+    SPORTS
+        &vert;
     ZERIFF</title>
 <meta name="description" content="">
 
@@ -12,9 +14,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Zeriff">
+<meta property="og:title" content="Sports">
 <meta property="og:description" content="">
-<meta property="og:url" content="http://localhost:4000/item/desi">
+<meta property="og:url" content="http://localhost:4000/shop/category/sports">
 <meta property="og:site_name" content="Zeriff">
 <meta property="og:image" content="http://localhost:4000/images/">
 
@@ -23,7 +25,7 @@
 
 
 <link rel="canonical" href="http://localhost:4000
-    /item/desi
+    /shop/category/sports
 ">
 
 
@@ -65,11 +67,13 @@
     </head>
     <body class="post-template page" itemscope itemtype="http://schema.org/WebPage">
         <main id="notepad-page-container" class="notepad-page-container" role="main">
+
             <header class="notepad-page-header">
                 <div class="notepad-page-menu-header">
                     <a class="notepad-blog-logo" href="http://localhost:4000">
-                        <img src="http://localhost:4000/images/whitelogo.png">
+                        <img src="http://localhost:4000/images/whitelogo.png" alt="Blog Logo">
                     </a>
+
                     <div class="notepad-blog-menu">
                         <div class="notepad-mobile-menu show-for-small">
                             <a href="#">
@@ -105,32 +109,54 @@
                         </ul>
                     </div>
                 </div>
-            </header>
-            <br>
-
-            <div class="ui container">
-                <div class="ui stackable grid">
-                    <div class="eight wide column">
-                        <img class="ui big image" src="http://localhost:4000/images/desi.jpg"/>
-                    </div>
-                    <div class="six wide column">
-                        <div class="info">
-                            <h3>Desi Hipster</h3>
-<hr />
-
-<h5>Price : ₹799</h5>
-<p>Premium quality Biowash T-shirt for men</p>
-<hr />
-
-<p><button class="ui secondary button">Soon in stores</button></p>
-
-                        </div>
-                    </div>
+                <div class="zcontainer">
+                    <h2>Sports</h2>
                 </div>
             </div>
+        </header>
+        <div class="zcontainer">
+            <div class="ui stackable three column grid">
+                
+                    <div class="column">
+                        <div class="ui segment">
+                            <a href="http://localhost:4000/item/desi">
+                                <img class="ui medium image" src="http://localhost:4000/images/desi.jpg"></a>
+                            <div class="mini ui horizontal divider">desi</div>
+                            <p>
+                                Biowash T-shirt for men
+                            </p>
+                            <a href="http://localhost:4000/item/desi" class="mini ui animated fade secondary button" tabindex="0">
+                                <div class="visible content">Soon In stores</div>
+                                <div class="hidden content">
+                                    ₹799
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="column">
+                        <div class="ui segment">
+                            <a href="http://localhost:4000/item/strip">
+                                <img class="ui medium image" src="http://localhost:4000/images/strip.jpg"></a>
+                            <div class="mini ui horizontal divider">strip</div>
+                            <p>
+                                Biowash T-shirt for men
+                            </p>
+                            <a href="http://localhost:4000/item/strip" class="mini ui animated fade secondary button" tabindex="0">
+                                <div class="visible content">Soon In stores</div>
+                                <div class="hidden content">
+                                    ₹799
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
 
-            <div class="cf"></div>
-            <footer class="notepad-site-footer">
+        <div class="cf"></div>
+        <div class="ui horizontal divider"></div>
+        <footer class="notepad-site-footer">
     <div class="copyright">
         <section>All content copyright
             <a href="http://localhost:4000/about">Zeriff Raiments</a>
@@ -148,8 +174,8 @@
     <div class="cf"></div>
 </footer>
 
-        </main>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    </main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>
     window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')
 </script>
@@ -180,10 +206,12 @@
     });
 </script>
 
+    <script>
+        $(document).ready(function () {
+            $('.special.cards .image').dimmer({on: 'hover'});
+            $('.ui.dropdown').dropdown();
+        });
+    </script>
 
-        <script>
-            $(document).ready(function () {});
-        </script>
-
-    </body>
+</body>
 </html>
