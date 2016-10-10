@@ -32,6 +32,8 @@ links:
     url: /shop/home
   - title: Blog
     url: /#indexposts
+  - title: Contact us
+    url: /contactus
 #  - title: Featured Posts
 #    url: /featured
 #  - title: Categories
